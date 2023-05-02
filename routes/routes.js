@@ -1,33 +1,36 @@
-const express = require('express')
-const Controller = require('../controllers/controllers')
-const jwt = require('jsonwebtoken')
+const express = require("express");
+const Controller = require("../controllers/controllers");
+const jwt = require("jsonwebtoken");
 
-const Router = express.Router()
+const Router = express.Router();
 
-Router.post('/createUser', Controller.createUser)
+Router.post("/createUser", Controller.createUser);
 
-Router.post('/login', Controller.login)
+Router.post("/login", Controller.login);
 
-Router.post('/addPassword', authenticateToken, Controller.addPassword)
+Router.post("/addPassword", authenticateToken, Controller.addPassword);
 
-Router.post('/deletePassword', authenticateToken, Controller.deletePassword)
+Router.post("/deletePassword", authenticateToken, Controller.deletePassword);
 
-Router.post('/editPassword', authenticateToken, Controller.editPassword)
+Router.post("/editPassword", authenticateToken, Controller.editPassword);
 
-Router.get('/getPasswordList', authenticateToken, Controller.getPasswordList)
+Router.get("/getPasswordList", authenticateToken, Controller.getPasswordList);
 
-Router.post('/saveLog', Controller.saveLog)
+function authenticateToken(req, res, next) {
+	const authHeaders = req.headers["authorization"];
+	if (authHeaders == null)
+		return res.status(401).json({ message: "No Authorization passed" });
+	const accessToken = authHeaders.split(" ")[1];
+	if (accessToken == null)
+		return res.status(401).json({ message: "No Access Token found" });
 
-function authenticateToken (req, res, next) {
-    const authHeaders = req.headers['authorization']
-    if(authHeaders == null) return res.status(401).json({message: "No Authorization passed"})
-    const accessToken = authHeaders.split(' ')[1]
-    if(accessToken == null) return res.status(401).json({message: "No Access Token found"})
-
-    jwt.verify(accessToken, 'wearecoders', (err) => {
-        if(err) return res.status(401).json({message : 'access Token not matched'})
-        next()
-    })
+	jwt.verify(accessToken, "wearecoders", (err) => {
+		if (err)
+			return res
+				.status(401)
+				.json({ message: "access Token not matched" });
+		next();
+	});
 }
 
-module.exports = Router
+module.exports = Router;

@@ -181,4 +181,3 @@ exports.addPassword = addPassword
 exports.deletePassword = deletePassword
 exports.editPassword = editPassword
 exports.getPasswordList = getPasswordList
-exports.saveLog = saveLog
