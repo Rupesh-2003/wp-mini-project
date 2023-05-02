@@ -19,3 +19,6 @@ by password created by you. No 3rd party included
 <br>
 
 ## Team Members
+Rupesh Raut ()
+Vihit Khetle ()
+Aditya Thatte ()
