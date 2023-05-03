@@ -1,6 +1,6 @@
 ## Passwords 
-Passwords is PWA for people who forget thier passwords. Passwords which are stored in notepad or any other local software will be lost if it they are not backed-up or synced to the cloud. 
-Storing passwords in Passwords directly stores data in your **mongoDB cloud**. You can access this data from any device and anywhere after the PWA is hosted.
+Passwords is PWA (Progressive Web App) for people who forget their passwords. Passwords which are stored in notepad or any other local software will be lost if they are not backed-up or synced to the cloud. 
+Storing passwords in Passwords directly stores data in your **mongoDB cloud**. You can access this data from any device and anywhere.
 
 ```
 Your passwords stored on your cloud DB which can only be accessed
