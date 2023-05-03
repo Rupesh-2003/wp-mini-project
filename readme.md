@@ -1,10 +1,10 @@
 ## Passwords 
-Passwords is PWA for people who forget thier passwords. passwords stored in notepad or any other local software will be lost if it is not synced to cloud. 
-Storing passwords in Passwords directly stores data in your **mongoDB cloud** You can access this data from any device and anywhere after the PWA is hosted.
+Passwords is PWA for people who forget thier passwords. Passwords which are stored in notepad or any other local software will be lost if it they are not backed-up or synced to the cloud. 
+Storing passwords in Passwords directly stores data in your **mongoDB cloud**. You can access this data from any device and anywhere after the PWA is hosted.
 
 ```
 Your passwords stored on your cloud DB which can only be accessed
-by password created by you. No 3rd party included
+by password created by you. No 3rd party included.
 ```
 
 ## Tech Stack
@@ -19,6 +19,6 @@ by password created by you. No 3rd party included
 <br>
 
 ## Team Members
-Rupesh Raut ()
-Vihit Khetle ()
-Aditya Thatte ()
+Rupesh Raut (SAP ID - 60003220103)
+Vihit Khetle (SAP ID - 60003220240)
+Aditya Thatte (SAP ID- 60003210157)
